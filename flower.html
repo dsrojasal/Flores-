@@ -1,24 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="icon" href="img/flowers.png" type="image/x-icon" />
-    <title>Flower</title>
-  </head>
-  <body class="container">
-    <audio src="sound/ChristianBasso&HaienQiu-Flowers.mp3" autoplay></audio>
-    <div id="lyrics">
-     
-    </div>
-    <h1 class="titulo">Estas flores amarillas son un reflejo de la alegría que traes a mi vida. <br> <br>
-      Gracias por iluminar mis días con tu presencia.</h1>
-  
-    <div class="night"></div>
-    <div class="flowers">
-      <div class="flower flower--1">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flower</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/ai.css">
+  <link rel="stylesheet" href="css/planet.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="img/flowers.png" type="image/x-icon" />
+
+
+ 
+</head>
+<body class="container">
+
+  <!-- 🌍 Planeta arriba como título -->
+  <div class="planet-header">
+    <button>
+      <div class="blackhole">
+        <span class="rocket-path">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="rocket"> 
+            <g> 
+              <path d="M0 0h24v24H0z" fill="none"></path> 
+              <path d="M8.498 20h7.004A6.523 6.523 0 0 1 12 23.502 6.523 6.523 0 0 1 8.498 20zM18 14.805l2 2.268V19H4v-1.927l2-2.268V9c0-3.483 2.504-6.447 6-7.545C15.496 2.553 18 5.517 18 9v5.805zM12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path> 
+            </g> 
+          </svg>
+        </span>
+        <span class="ring">
+          <span class="block"></span>
+        </span>
+      </div>
+      <span class="text">TE AMO</span>
+    </button>
+  </div> 
+  <div class="orbit">
+    <div class="satellite"><img src="img/1.jpg" alt="foto1"></div>
+    <div class="satellite"><img src="img/2.jpg" alt="foto2"></div>
+    <div class="satellite"><img src="img/3.jpg" alt="foto3"></div>
+    <div class="satellite"><img src="img/4.jpg" alt="foto4"></div>
+    <div class="satellite"><img src="img/5.jpg" alt="foto5"></div>
+    <div class="satellite"><img src="img/6.jpg" alt="fot06"></div>
+    <div class="satellite"><img src="img/7.jpg" alt="foto7"></div>
+    <div class="satellite"><img src="img/8.jpg" alt="foto8"></div>
+    <div class="satellite"><img src="img/9.jpg" alt="foto9"></div>
+    <div class="satellite"><img src="img/10.jpg" alt="foto9"></div>
+  </div>
+</div>
+
+
+  <!-- 🎵 Música -->
+  <audio src="sound/ChristianBasso&HaienQiu-Flowers.mp3" autoplay></audio>
+  <div id="lyrics"></div>
+
+  <!-- 💛 Texto principal -->
+  <h2 class="titulo">
+    Estas flores amarillas son un reflejo de la alegría que traes a mi vida. <br><br>
+    Gracias por iluminar mis días con tu presencia.
+  </h2>
+
+  <!-- 🌌 Estrellas y flores -->
+  <div class="night"></div>
+  <div class="flowers">
+    <!-- tus flores -->
+     <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
           <div class="flower__leaf flower__leaf--1"></div>
           <div class="flower__leaf flower__leaf--2"></div>
@@ -326,7 +371,9 @@
         </div>
       </div>
     </div>
-    <script src="anim.js"></script>
-    <script src="main.js"></script>
-  </body>
+  </div>
+
+  <script src="anim.js"></script>
+  <script src="main.js"></script>
+</body>
 </html>

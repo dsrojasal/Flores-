@@ -1,0 +1,96 @@
+/* Usamos tu mismo CSS para la posición */
+.planet-header {
+    position: absolute;   /* lo saco del flujo normal */
+    top: 10%;             /* responsive: porcentaje de la pantalla */
+    left: 80%;            /* siempre centrado horizontal */
+    transform: translateX(-50%); 
+    z-index: 1000;        
+}
+
+body {
+    margin: 0;
+    padding-top: 10vh;    /* altura adaptable */
+    text-align: center;
+}
+
+/* Orbit container */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50vw;  /* tamaño de la órbita relativo al viewport */
+    height: 50vw;
+    max-width: 400px;   /* tamaño máximo en pantallas grandes */
+    max-height: 400px;
+    margin-left: -25vw; /* mitad de width */
+    margin-top: -25vw;  /* mitad de height */
+    pointer-events: none;
+}
+
+/* Satélites (fotos) */
+.satellite {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12vw;    /* tamaño relativo al viewport */
+    height: 12vw;
+    max-width: 70px;   /* tamaño máximo */
+    max-height: 70px;
+    margin: -6vw;   /* la mitad del width/height */
+    animation: orbit 12s linear infinite;
+}
+
+.satellite img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgb(236, 236, 236);
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+/* Cada foto con diferente radio/origen */
+.satellite:nth-child(1) { transform-origin: 25vw 0; animation-duration: 8s; }
+.satellite:nth-child(2) { transform-origin: -25vw 0; animation-duration: 12s; }
+.satellite:nth-child(3) { transform-origin: 0 -25vw; animation-duration: 15s; }
+.satellite:nth-child(4) { transform-origin: 0 25vw; animation-duration: 10s; }
+.satellite:nth-child(5) { transform-origin: 30vw 0; animation-duration: 18s; }
+.satellite:nth-child(6) { transform-origin: -30vw 0; animation-duration: 14s; }
+.satellite:nth-child(7) { transform-origin: 0 -30vw; animation-duration: 20s; }
+.satellite:nth-child(8) { transform-origin: 0 30vw; animation-duration: 16s; }
+.satellite:nth-child(9) { transform-origin: 35vw 0; animation-duration: 22s; }
+.satellite:nth-child(10){ transform-origin: -35vw 0; animation-duration: 25s; }
+
+@keyframes orbit {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* --- Media Queries para móviles y tablets --- */
+@media screen and (max-width: 768px) {
+    .orbit {
+        width: 70vw;
+        height: 70vw;
+        margin-left: -35vw;
+        margin-top: -35vw;
+    }
+    .satellite {
+        width: 14vw;
+        height: 14vw;
+        margin: -7vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .orbit {
+        width: 90vw;
+        height: 90vw;
+        margin-left: -45vw;
+        margin-top: -45vw;
+    }
+    .satellite {
+        width: 16vw;
+        height: 16vw;
+        margin: -8vw;
+    }
+}

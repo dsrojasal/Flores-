@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>Flowers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body>
@@ -16,15 +18,36 @@
         <span>o</span>
         <span>l</span>
         <span>a</span>
+        <span></span>
+        <span>B</span>
+        <span>e</span>
+        <span>l</span>
+        <span>l</span>
+        <span>a</span>
+
         <span>!</span>
     </div>
     <div class="description">
         <span>ESTE DETALLE ES PARA TI :)</span>
     </div>
     <div class="button">
-        <button class="botones">
-            <a href="flower.html" style="color: #fff;">CLICK AQUÍ</a>
-        </button>
+    <button
+        onclick="window.location.href='flower.html'"
+        class="cursor-pointer bg-gradient-to-b from-indigo-500 to-indigo-600 shadow-[0px_4px_32px_0_rgba(99,102,241,.70)] px-6 py-3 rounded-xl border-[1px] border-slate-500 text-white font-medium group"
+>
+  <div class="relative overflow-hidden">
+    <p
+      class="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
+    >
+      CLICK AQUÍ
+    </p>
+    <p
+      class="absolute top-7 left-2.5 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
+    >
+        MI AMOR
+    </p>
+  </div>
+</button>
     </div>
 
 </body>
